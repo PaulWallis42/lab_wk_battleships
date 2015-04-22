@@ -14,6 +14,6 @@ class Ship
   def shoot
     @hits_received += 1
     @hits_received >= @size ? @floating = false : @floating = true
-    'BOOOOOM!'
+    'HIT!'
   end
 end

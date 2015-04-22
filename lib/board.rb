@@ -9,4 +9,8 @@ class Board
   def add_cell(cell)
     @content << cell
   end
+
+  def shoot
+    @content[0].shoot
+  end
 end

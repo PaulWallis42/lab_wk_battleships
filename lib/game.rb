@@ -1,21 +1,13 @@
 class Game
-  attr_reader :player1, :player2
+  attr_reader :player1, :player2, :turn
 
-  def initialize
-    @player1 = false
-    @player2 = false
+  def initialize(player1, player2)
+    @player1 = player1
+    @player2 = player2
+    @turn = @player1
   end
 
-  def add_player1(player)
-    @player1 = player
-  end
-
-  def add_player2(player)
-    @player2 = player
-  end
-
-  def ready
-    fail 'Need two players' if @player1 == false || @player2 == false
-    true
+  def change_turn
+    @turn == @player1 ? @turn = @player2 : @turn = @player1
   end
 end

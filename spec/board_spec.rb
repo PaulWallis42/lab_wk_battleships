@@ -15,4 +15,10 @@ describe Board do
     board.add_cell(:cell)
     expect(board.content).to eq([:cell])
   end
+
+  it 'can shoot at a cell' do
+    cell = double :cell, shoot: 'hit'
+    board.add_cell(cell)
+    expect(board.shoot).to eq('hit')
+  end
 end
