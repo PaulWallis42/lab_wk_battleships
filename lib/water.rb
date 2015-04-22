@@ -1,7 +1,12 @@
 class Water
-  attr_reader :water
+  attr_reader :shot
 
   def initialize
-    @water = true
+    @shot = false
+  end
+
+  def shoot
+    @shot = true
+    'MISS'
   end
 end

@@ -15,13 +15,13 @@ describe Ship do
     expect(ship.hits_received).to eq(0)
   end
 
-  it 'can be hit' do
-    ship.hit
+  it 'can be shot' do
+    ship.shoot
     expect(ship.hits_received).to eq(1)
   end
 
   it 'sinks if hit' do
-    ship.hit
+    ship.shoot
     expect(ship.floating?).to eq(false)
   end
 end
